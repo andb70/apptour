@@ -26,7 +26,7 @@ export class LeanComponent implements OnInit {
 
 
     // Da migliorare per mettere se attivo o no...
-    if(this.btn1 = 'active'){
+    if (this.btn1 = 'active') {
       this.btn1 = 'none';
     } else {
       this.btn1 = 'active';
@@ -36,9 +36,5 @@ export class LeanComponent implements OnInit {
   onOttimizza2() {
     this.btnOttimizza2 = !this.btnOttimizza2;
     this.service.onOttimizza2({stato: this.btnOttimizza2});
-  }
-
-  onOttimizza2() {
-
   }
 }

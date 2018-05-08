@@ -9,21 +9,21 @@ import {stringify} from '@angular/compiler/src/util';
   styleUrls: ['./view.component.css']
 })
 export class ViewComponent implements OnInit {
-  ObjectID = ObjectID;
-  index: ObjectID = ObjectID.viewPiantina;
+ /* ObjectID = ObjectID;
+  index: ObjectID = ObjectID.viewPiantina;*/
 
   constructor(public service: StorageService) {
-    this.service.viewChange.subscribe(res => {
+    /*this.service.viewChange.subscribe(res => {
       this.index = res.curIndex;
-    });
+    });*/
   }
 
   ngOnInit() {
-    this.index = this.service.curView();
+   /* this.index = this.service.curView();*/
   }
 
-  curIndex(temp): boolean {
+  /*curIndex(temp): boolean {
     return (temp == this.index);
-  }
+  }*/
 
 }

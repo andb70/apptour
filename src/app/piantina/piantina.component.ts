@@ -17,9 +17,9 @@ export class PiantinaComponent implements OnInit {
 
   ngOnInit() {
   }
-  onDivClick(index) {
+/*  onDivClick(index) {
     this.service.onView({curIndex: index});
-  }
+  }*/
   onDivMouseOver(index) {
     this.service.onMouseOver({curIndex: index});
   }
