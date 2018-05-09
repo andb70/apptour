@@ -47,7 +47,7 @@ const objMapping: ObjectID[] = [
 @Injectable()
 export class StorageService {
   /* index è l'indice dell'oggetto corrente caricato nella View*/
-  index: ObjectID = ObjectID.viewPiantina;
+ /* index: ObjectID = ObjectID.viewPiantina;*/
 
   @Output() leanClick = new EventEmitter();
   @Output() digitalClick = new EventEmitter();
@@ -55,6 +55,8 @@ export class StorageService {
   @Output() viewChange = new EventEmitter();
   @Output() ottimizzazione1 = new EventEmitter();
   @Output() ottimizzazione2 = new EventEmitter();
+  @Output() ottimizzazione3 = new EventEmitter();
+  @Output() ottimizzazione4 = new EventEmitter();
 
   constructor() { }
 
@@ -75,11 +77,19 @@ export class StorageService {
     this.ottimizzazione2.emit(event);
   }
 
+  onOttimizza3(event) {
+    this.ottimizzazione3.emit(event);
+  }
+
+  onOttimizza4(event) {
+    this.ottimizzazione4.emit(event);
+  }
+
   onMouseOver(event) {
     this.objectMouseOver.emit(event);
   }
 
-  onView(event) {
+  /*onView(event) {
     const curIndex: ObjectID = event.curIndex;
     this.index = objMapping[curIndex];
     console.log('query ' + curIndex + ' pointTo ' + this.index);
@@ -88,5 +98,5 @@ export class StorageService {
 
   curView() {
     return this.index;
-  }
+  }*/
 }

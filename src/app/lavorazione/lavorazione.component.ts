@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {StorageService} from '../storage.service';
 import {ObjectID} from '../object-id.enum';
 
@@ -7,7 +7,7 @@ import {ObjectID} from '../object-id.enum';
   templateUrl: './lavorazione.component.html',
   styleUrls: ['./lavorazione.component.css']
 })
-export class LavorazioneComponent implements OnInit {
+export class LavorazioneComponent {
   ObjectID = ObjectID;
   constructor(public service: StorageService) {
     /*this.service.viewChange.subscribe(res => {
@@ -15,11 +15,6 @@ export class LavorazioneComponent implements OnInit {
     });*/
   }
 
-  ngOnInit() {
-  }
-  onDivClick(index) {
-    this.service.onView({curIndex: index});
-  }
   onDivMouseOver(index) {
     this.service.onMouseOver({curIndex: index});
   }
